@@ -1,5 +1,1 @@
-let myFavFood = "Ramen";
-
-
-alert("Hello World");
-document.write(myFavFood);
+let pokemonList = [{name:["bulbasaur","pikachu", "Charmander"]},{height:[.7 , .4, .6]},{types:["Grass" , "Electric", "fire"]}];
