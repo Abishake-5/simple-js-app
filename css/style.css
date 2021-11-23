@@ -1,21 +1,30 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
-body{
-    background-color: rgb(199, 199, 211);
+body {
+  background-color: rgb(199, 199, 211);
 }
-.text{
-border: solid 3px black;
-width: 25%;
-margin: 0 auto;
-margin-top: 25%;
-background-color: rgb(174, 174, 199);
-padding: 10px;
+.text {
+  border: solid 3px black;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 25%;
+  background-color: rgb(174, 174, 199);
+  padding: 10px;
 }
 .text p {
-text-align: center;
-padding-top: 5px;
-
+  text-align: center;
+  padding-top: 5px;
+}
+.button {
+  background-color: #4368dc;
+  color: white;
+  padding: 5px;
+}
+.button:hover {
+  background-color: #507cff;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
 }
