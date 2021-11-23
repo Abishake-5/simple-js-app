@@ -46,11 +46,12 @@ pokemonList.appendChild(listItem);
 
 button.addEventListener("click",function()
 {
-    return showDetails();
+    return showDetails(pokemon);
     // returns the function showDetails which shows an alert as of right now
 });
 function showDetails (pokemon){
-    alert("The button was clicked")
+     console.log(pokemon.name);
+   
     // This function will eventually be rewritten to disply bio description of the pokemon
 }
 
