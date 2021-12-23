@@ -87,63 +87,29 @@ let pokemonRepository = (function () {
     });
   }// End of showDetails Function
 
-
- function showModal (pokemon){
-// start of show modal
-
-let modalContainer = document.createElement('div');
-modalContainer.classList.add('modal-container')
-document.body.appendChild(modalContainer);
-modalContainer.innerText = '';
-//  Creats the parent container element and appends to the body
-
-let modal = document.createElement('div');
-modal.classList.add('modal');
-modalContainer.appendChild(modal);
-// Modal div appens to container
-
-let closeButtonElement = document.createElement('button');
-closeButtonElement.classList.add('closeButtonElement');
-closeButtonElement.innerText = 'Close';
-modal.appendChild(closeButtonElement);
-closeButtonElement.addEventListener('click', hideModal);
-// This is the close button on the modal
-
-let titleElement = document.createElement('h1');
-titleElement.innerText =pokemon.name;
-
-modal.appendChild(titleElement);
-
-let contentElement = document.createElement('p');
-contentElement.innerText = ('Height: ' + pokemon.height + 'm');
-modal.appendChild(contentElement);
-
-let imgElement = document.createElement('img');
-imgElement.src = pokemon.imageUrl;
-modal.appendChild(imgElement);
+  function showModal(pokemon) {
+    let modalBody = $('.modal-body');
+    let modalTitle = $('.modal-title');
+    modalTitle.empty();
+    modalBody.empty();
 
 
- function hideModal (){
-   modalContainer.style.display="none";
-   
- }
 
- window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      hideModal();  
+//Create a name element to display in the console
+  let nameElement = $('<h1 class="text-capitalize">' + pokemon.name + '</h1>');
+  // Image element
+  let imageElement = $('<img class="modal-img" src="" >');
+  imageElement.attr('src', pokemon.imageUrl);
+  // Height
+  let heightElement = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+
+
+    modalTitle.append(nameElement);
+    modalBody.append(imageElement);
+    modalBody.append(heightElement);
+
+    $('#pokedex').modal();
     }
-   
-  });
-
-    modalContainer.addEventListener('click', (e) => {
-    let target = e.target;
-    if (target === modalContainer) {
-      hideModal();
-    }
-  });
-
-  }// End of showModal
-
 
   return {
     // This is where all the function is returned
