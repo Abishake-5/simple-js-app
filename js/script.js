@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 let pokemonRepository = (function () {
     // Start of the IIFE function
   let pokemonList = [];
@@ -33,7 +34,7 @@ let pokemonRepository = (function () {
     // Append meaning add. This is then added to HTML
     pokemonList.appendChild(listpokemon);
 
-    button.addEventListener("click", function(event) {
+    button.addEventListener("click", function() {
       showDetails(pokemon);
       
     });
@@ -88,27 +89,28 @@ let pokemonRepository = (function () {
   }// End of showDetails Function
 
   function showModal(pokemon) {
-    let modalBody = $('.modal-body');
-    let modalTitle = $('.modal-title');
+    let modalBody = $(".modal-body");
+    // eslint-disable-next-line no-undef
+    let modalTitle = $(".modal-title");
     modalTitle.empty();
     modalBody.empty();
 
 
 
 //Create a name element to display in the console
-  let nameElement = $('<h1 class="text-capitalize">' + pokemon.name + '</h1>');
+  let nameElement = $("<h1 class=\"text-capitalize\">" + pokemon.name + "</h1>");
   // Image element
-  let imageElement = $('<img class="modal-img" src="" >');
-  imageElement.attr('src', pokemon.imageUrl);
+  let imageElement = $("<img class=\"modal-img\" src=\"\" >");
+  imageElement.attr("src", pokemon.imageUrl);
   // Height
-  let heightElement = $('<p>' + 'Height: ' + pokemon.height + '</p>');
+  let heightElement = $("<p>" + "Height: " + pokemon.height + "</p>");
 
 
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
     modalBody.append(heightElement);
 
-    $('#pokedex').modal();
+    $("#pokedex").modal();
     }
 
   return {

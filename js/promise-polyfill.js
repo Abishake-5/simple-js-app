@@ -1,4 +1,6 @@
+/* eslint-disable no-undef */
 
+// eslint-disable-next-line no-undef
 !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t():"function"==typeof define&&define.amd?define(t):t()}(0,function()
 {"use strict";function e(e){var t=this.constructor;return this.then(function(n){return t.resolve(e()).then(function(){return n})},function
 (n){return t.resolve(e()).then(function(){return t.reject(n)})})}function t(e){return new this(function(t,n){function o(e,n){
@@ -11,6 +13,7 @@ TypeError("Promises must be constructed via new");if("function"!=typeof e)throw 
 ;this._state=0,this._handled=!1,this._value=undefined,this._deferreds=[],l(e,this)}function i(e,t){for(;3===e._state;)
 e=e._value;0!==e._state?(e._handled=!0,r._immediateFn(function(){var n=1===e._state?t.onFulfilled:t.onRejected;
 if(null!==n){var o;try{o=n(e._value)}catch(r){return void u(t.promise,r)}f(t.promise,o)}else(1===e._state?f:u)
+// eslint-disable-next-line no-unexpected-multiline
 (t.promise,e._value)})):e._deferreds.push(t)}function f(e,t){try{if(t===e)throw new TypeError
 ("A promise cannot be resolved with itself.");if(t&&("object"==typeof t||"function"==typeof t)){var n=t.then;
 if(t instanceof r)return e._state=3,e._value=t,void c(e);if("function"==typeof n)return void l(function(e,t){return function()
@@ -31,5 +34,6 @@ e&&e.constructor===r?e:new r(function(t){t(e)})},r.reject=function(e){return new
 r.resolve(e[i]).then(t,o)})},r._immediateFn="function"==typeof s&&function(e){s(e)}||function(e)
 {a(e,0)},r._unhandledRejectionFn=function(e){void 0!==console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)};
 var d=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if("undefined"!=typeof global)
+// eslint-disable-next-line no-undef
 return global;throw Error("unable to locate global object")}();"function"!=typeof d.Promise?d.Promise=r:(d.Promise.prototype["finally"]
 ||(d.Promise.prototype["finally"]=e),d.Promise.allSettled||(d.Promise.allSettled=t))});
