@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Oswald:wght@500&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Oswald:wght@500&display=swap);
 * {
   margin: 0;
   box-sizing: border-box;
@@ -8,11 +7,10 @@
 }
 body {
   background-color: #004d1a;
-  font-family: "Montserrat", sans-seri;
+  font-family: Montserrat, sans-seri;
 }
-
-html,
-body {
+body,
+html {
   font-family: Arial, sans-serif;
 }
 .button-class {
@@ -21,7 +19,7 @@ body {
   margin: 15px;
   border-radius: 10px;
   background-color: #00802b;
-  color: white;
+  color: #fff;
   font-size: 17px;
 }
 ul {
@@ -34,8 +32,9 @@ ul {
 .button-class:hover {
   cursor: pointer;
   opacity: 0.7;
-  transition: 500ms ease;
+  transition: 0.5s ease;
 }
 .modal-img {
   width: 50%;
+  margin-left: 25%;
 }
